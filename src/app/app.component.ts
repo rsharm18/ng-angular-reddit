@@ -29,14 +29,16 @@ export class AppComponent {
     return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
   }
 
-  // flagArticle(article:Article){
-  //   //console.log('This is Test');
-  //   // let articles:Article[];
-  //   // let vote:number;
+  flagThisArticle(article:Article){
 
-  //   // articles = this.sortedArticles();
-  //   // vote = articles[articles.length - 1].votes ;
-  //   // vote-- ;
-  //   // article.votes = vote;
-  // }
+    console.log("from flagThisArticle");
+
+    let articles:Article[];
+    let vote:number;
+
+    this.articles = this.sortedArticles();
+    vote = this.articles[this.articles.length - 1].votes ;
+    vote-- ;
+    article.votes = vote; 
+  }
 }

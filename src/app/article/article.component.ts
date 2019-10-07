@@ -2,7 +2,9 @@ import {
   Component,
   OnInit,
   Input,        // <-- added,
-  HostBinding
+  HostBinding,
+  Output,
+  EventEmitter
 } from '@angular/core';
 import { Article } from './article.model'; // <-- added
 
@@ -15,8 +17,10 @@ export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
   @Input() article: Article;
 
+  @Output() flagArticle : EventEmitter<Article>;
  
   constructor() {
+    this.flagArticle = new EventEmitter();
     // article is populated by the Input now,
     // so we don't need anything here
 
@@ -32,12 +36,15 @@ export class ArticleComponent implements OnInit {
     return false;
   }
 
-  flagMe()
+  flagIt()
   {
     
-    console.log('this is from the Article class');
+    console.log('this is from the Article class - flagIt method');
+
+    this.flagArticle.emit(this.article);
     
   }
+
   ngOnInit() {
   }
 

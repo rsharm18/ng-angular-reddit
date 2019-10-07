@@ -24,6 +24,7 @@ form.form:after {
   background-color: #E6E6E6;
   padding: 1em 0;
   border-radius: 5px;
+  width:100px
 }
 
 .ui.grid.posts {
@@ -46,4 +47,5 @@ ul.ui.list li:before {
   clear: both;
   width: 100%;
 }
+
 

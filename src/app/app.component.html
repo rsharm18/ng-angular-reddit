@@ -21,6 +21,6 @@
 <div class="ui grid posts">
   <app-article
     *ngFor="let article of sortedArticles()"
-    [article]="article">
+    [article]="article" (flagArticle)="flagThisArticle($event)">
   </app-article>
 </div>
