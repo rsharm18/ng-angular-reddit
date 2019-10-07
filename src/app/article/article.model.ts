@@ -2,11 +2,13 @@ export class Article {
   title: string;
   link: string;
   votes: number;
-
-  constructor(title: string, link: string, votes?: number) {
+  role: string;
+  
+  constructor(title: string, link: string, votes?: number,role?: string) {
     this.title = title;
     this.link = link;
     this.votes = votes || 0;
+    this.role = role || 'user';
   }
 
   voteUp(): void {
@@ -29,4 +31,6 @@ export class Article {
       return null;
     }
   }
+
+ 
 }

@@ -11,9 +11,9 @@ export class AppComponent {
 
   constructor() {
     this.articles = [
-      new Article('Angular', 'http://angular.io', 3),
-      new Article('Fullstack', 'http://fullstack.io', 2),
-      new Article('Angular Homepage', 'http://angular.io', 1)
+      new Article('Angular', 'http://angular.io', 3,'administrator'),
+      new Article('Fullstack', 'http://fullstack.io', 2,),
+      new Article('Angular Homepage', 'http://angular.io', 1,'user')
     ];
   }
 
@@ -28,4 +28,15 @@ export class AppComponent {
   sortedArticles(): Article[] {
     return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
   }
+
+  // flagArticle(article:Article){
+  //   //console.log('This is Test');
+  //   // let articles:Article[];
+  //   // let vote:number;
+
+  //   // articles = this.sortedArticles();
+  //   // vote = articles[articles.length - 1].votes ;
+  //   // vote-- ;
+  //   // article.votes = vote;
+  // }
 }

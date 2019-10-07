@@ -15,9 +15,11 @@ export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
   @Input() article: Article;
 
+ 
   constructor() {
     // article is populated by the Input now,
     // so we don't need anything here
+
   }
 
   voteUp(): boolean {
@@ -30,6 +32,12 @@ export class ArticleComponent implements OnInit {
     return false;
   }
 
+  flagMe()
+  {
+    
+    console.log('this is from the Article class');
+    
+  }
   ngOnInit() {
   }
 
