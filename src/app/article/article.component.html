@@ -1,4 +1,4 @@
-<div class="four wide column center aligned votes">
+<div class="twelve wide column center aligned votes" style='width:20%'>
   <div class="ui statistic">
     <div class="value">
       {{ article.votes }}
@@ -28,7 +28,7 @@
       </a>
     </li>
     <li class="item" *ngIf="article.role=='administrator'"> 
-      <button (click)="flagIt()" class="button floated negative right ui">
+      <button (click)="flagArticle()" class="button floated negative right ui">
         flag
       </button> 
     </li>

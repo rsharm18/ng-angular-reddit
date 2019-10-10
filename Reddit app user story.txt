@@ -1,0 +1,30 @@
+1. As a user I would want to be able to						
+						
+	post an article with a link and a title					
+	view the artilces posted by me					
+	view the articles posted by others 					
+	upvote an article					
+	downvote an article					
+	click on the link to access the article					
+						
+2. As an administrator I would want to be able to						
+						
+	post an article with a link and a title					
+	view the artilces posted by me					
+	view the articles posted by others 					
+	upvote an article					
+	downvote an article					
+	click on the link to access the article					
+	flag an article					
+						
+3. Flag a problematic post indicating there’s an  issue with the post						
+						
+	Administrator can inform the user of the violations by adding comments that describe the violation					
+	Reduces the vote score such that the post in question is downvoted to least important or bottom of the list.					
+	The problematic post is automatically removed if the user does not address the changes within x time period					
+	The administrator can remove the post at their discretion					
+	The user is suspended for 1 week if the violations are not corrected					
+						
+						
+						
+						

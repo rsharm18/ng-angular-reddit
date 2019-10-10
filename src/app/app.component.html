@@ -10,8 +10,16 @@
     <input name="link" id="link" #newlink> <!-- changed -->
   </div>
 
+  <div class="field">
+    <label for="link">Role:</label>
+    <select name="userType" id="userType" #userType>
+      <option value='user' selected>User</option>
+      <option value='administrator'>Administrator</option>
+    </select>
+   
+  </div>
   <!-- added this button -->
-  <button (click)="addArticle(newtitle, newlink)"
+  <button (click)="addArticle(newtitle, newlink, userType)"
           class="ui positive right floated button">
     Submit link
   </button>
@@ -21,6 +29,6 @@
 <div class="ui grid posts">
   <app-article
     *ngFor="let article of sortedArticles()"
-    [article]="article" (flagArticle)="flagThisArticle($event)">
+    [article]="article" (flagMe)="flagThisArticle($event)">
   </app-article>
 </div>

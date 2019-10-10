@@ -17,14 +17,26 @@ export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
   @Input() article: Article;
 
-  @Output() flagArticle : EventEmitter<Article>;
+  @Output() flagMe : EventEmitter<Article>;
  
+  
   constructor() {
-    this.flagArticle = new EventEmitter();
+    console.log("From the article constructor")
+    this.flagMe = new EventEmitter();
+   
+   // console.log(this.appComp.articles);
     // article is populated by the Input now,
     // so we don't need anything here
 
   }
+
+  //flagArticle() {
+    //called service called flag article
+
+    //in service function todo 
+    //const downVote = this.myService.flagArticle(article, articleIndex)
+    // this.articles[articleIndex].vote = downVote;
+  //}
 
   voteUp(): boolean {
     this.article.voteUp();
@@ -36,16 +48,27 @@ export class ArticleComponent implements OnInit {
     return false;
   }
 
-  flagIt()
+  flagArticle()
   {
     
     console.log('this is from the Article class - flagIt method');
 
-    this.flagArticle.emit(this.article);
+    this.flagMe.emit(this.article);
     
   }
 
-  ngOnInit() {
+  ngOnInit(){
+    console.log("called from article init");
+  }
+
+  ngOnDestroy()
+  {
+    console.log("called from article destroy"); 
+  }
+
+  ngOnChange()
+  {
+    console.log("called from article onchange"); 
   }
 
 }
