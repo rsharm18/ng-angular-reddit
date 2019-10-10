@@ -1,3 +1,12 @@
+#################################################	
+Gitbub Repo - https://github.com/rsharm18/ng-angular-reddit.git
+Firebase URL - https://ng-redditt-ravi.firebaseapp.com/#
+
+I have added a drop down (Role) where user can select the role when posting an article. later on we can extend this feature where the role will defaulted based on the user profile and only admin will have the edit access to the role.
+
+I have also added the flag button which is only visible for the articles posted by administrator. When a user flags an article it receives lowest vote from the array list.
+
+#################################################
 # NgBook: Angular Reddit
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
